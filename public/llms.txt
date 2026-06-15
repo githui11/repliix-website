@@ -1,0 +1,31 @@
+# Repliix - AI Automation Agency
+
+> The Outbound AI Agency. Scale Your Revenue with AI-Driven Solutions.
+
+## Who We Are
+Repliix is a leading AI automation agency based in Nairobi, serving clients worldwide. We specialize in building **deterministic AI systems**—automation that produces consistent, reliable results every time, unlike "probabilistic" AI that guesses.
+
+## What We Do (Core Services)
+We replace manual bottlenecks with automated systems:
+
+1.  **AI Lead Generation**: We build end-to-end prospecting engines using Clay, Apollo, and ChatGPT to generate 500+ qualified leads per week.
+2.  **Outbound Sales Automation**: Automated cold email infrastructure (Instantly/Smartlead) that sends personalized outreach at scale without landing in spam.
+3.  **Project Management Automation**: AI systems that triage tasks, update CRMs, and manage fulfillment workflows automatically.
+4.  **AI Hiring Systems**: Automated candidate screening, scoring, and interview scheduling.
+5.  **Custom CRM Development**: Tailored data systems that sync perfectly with your outbound efforts.
+
+## Value Proposition
+- **Outcome-Based**: We don't sell hours; we sell systems that generate revenue.
+- **Deterministic**: Our workflows are engineered to be 99% reliable.
+- **No Vendor Lock-in**: We build the system, hand it over, and you own it content.
+
+## Key Resources
+- **Services**: [https://www.repliix.com/services](https://www.repliix.com/services)
+- **Case Studies**: [https://www.repliix.com/#work](https://www.repliix.com/#work)
+- **Blog & Insights**: [https://www.repliix.com/blog](https://www.repliix.com/blog)
+- **Pricing/Consultation**: [https://cal.com/repliix-mbmqhb/30min](https://cal.com/repliix-mbmqhb/30min)
+
+## Contact
+- **Email**: gkiuna@repliix.com
+- **Founder**: Githui Maina
+- **Location**: Nairobi, Kenya (Serving Global)

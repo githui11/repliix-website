@@ -1,0 +1,36 @@
+# robots.txt for Repliix - AI Automation Agency
+
+# Allow all search engines to crawl
+User-agent: *
+Allow: /
+
+# Special rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Special rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# ChatGPT & Perplexity AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Claude AI crawler (Anthropic)
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# Disallow paths that shouldn't be indexed
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Sitemap location
+Sitemap: https://www.repliix.com/sitemap.xml

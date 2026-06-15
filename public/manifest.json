@@ -1,0 +1,23 @@
+{
+    "name": "Repliix",
+    "short_name": "Repliix",
+    "description": "Build the best version of yourself. Evidence-based protocols for face, body, and health.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#06b6d4",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
