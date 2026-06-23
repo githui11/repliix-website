@@ -126,15 +126,6 @@ export default function Home() {
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a
-                href="https://app.repliix.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-                style={{ padding: '1rem 2rem', fontSize: '1rem', fontWeight: 700 }}
-              >
-                Try the App Free
-              </a>
-              <a
                 href="#how-it-works"
                 style={{
                   padding: '1rem 2rem',

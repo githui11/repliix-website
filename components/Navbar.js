@@ -40,19 +40,6 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <a
-                        href="https://app.repliix.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn"
-                        style={{
-                            padding: 'clamp(0.4rem, 1.5vw, 0.5rem) clamp(1rem, 3vw, 1.5rem)',
-                            fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)',
-                            whiteSpace: 'nowrap'
-                        }}
-                    >
-                        Try the App
-                    </a>
                 </div>
             </div>
         </nav>
