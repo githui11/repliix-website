@@ -291,6 +291,9 @@ export default function Home() {
             <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', marginTop: '1.5rem', marginBottom: 0 }}>
               Free trial available. $10/month after.
             </p>
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginTop: '0.75rem', marginBottom: 0 }}>
+              📱 Native app coming soon to the Google Play Store.
+            </p>
           </div>
         </section>
 
