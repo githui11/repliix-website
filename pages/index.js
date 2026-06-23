@@ -275,24 +275,14 @@ export default function Home() {
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', marginBottom: '2.5rem' }}>
               Repliix runs in your browser. No download required. Get your personalized protocol in under 5 minutes.
             </p>
-            <a
-              href="https://app.repliix.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: '0.75rem',
-                background: '#fff', color: 'var(--accent)',
-                padding: '1rem 2.25rem', borderRadius: 10,
-                fontWeight: 700, fontSize: '1.05rem'
-              }}
-            >
-              Try Repliix Free
-            </a>
-            <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.85rem', marginTop: '1.5rem', marginBottom: 0 }}>
-              Free trial available. $10/month after.
-            </p>
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginTop: '0.75rem', marginBottom: 0 }}>
-              📱 Native app coming soon to the Google Play Store.
+            <p style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
+              color: '#fff', fontWeight: 700, fontSize: '1.05rem', margin: 0
+            }}>
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                <path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/>
+              </svg>
+              Coming soon to the Google Play Store
             </p>
           </div>
         </section>
