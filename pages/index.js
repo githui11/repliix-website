@@ -1,4 +1,5 @@
-﻿import Head from 'next/head';
+﻿// build: beta signup form live (cache-bust 2026-06-28)
+import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
