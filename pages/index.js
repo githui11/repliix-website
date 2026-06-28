@@ -1,10 +1,42 @@
 ﻿import Head from 'next/head';
 import Link from 'next/link';
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { OrganizationSchema, FAQSchema } from '../components/Schema';
 
 export default function Home() {
+  const [betaEmail, setBetaEmail] = useState('');
+  const [betaStatus, setBetaStatus] = useState(null); // null | 'ok' | 'err'
+  const [betaMsg, setBetaMsg] = useState('');
+  const [betaBusy, setBetaBusy] = useState(false);
+
+  async function submitBeta(e) {
+    e.preventDefault();
+    setBetaBusy(true);
+    setBetaStatus(null);
+    try {
+      const res = await fetch(
+        'https://githuimaina11--claude-orchestrator-fastapi-app.modal.run/repliix-beta-signup',
+        { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: betaEmail }) }
+      );
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) {
+        setBetaStatus('ok');
+        setBetaMsg("You're in! Check your inbox for the beta install link.");
+        setBetaEmail('');
+      } else {
+        setBetaStatus('err');
+        setBetaMsg(data.detail || 'Something went wrong — please try again.');
+      }
+    } catch {
+      setBetaStatus('err');
+      setBetaMsg('Could not connect — please try again.');
+    } finally {
+      setBetaBusy(false);
+    }
+  }
+
   const faqs = [
     {
       question: "Does the app take a photo of my face?",
@@ -255,26 +287,59 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section id="download" style={{
+        {/* Beta signup CTA */}
+        <section id="beta" style={{
           padding: 'clamp(4rem, 8vw, 7rem) 0',
           background: 'var(--accent)',
           textAlign: 'center'
         }}>
-          <div className="container" style={{ maxWidth: 640 }}>
-            <h2 style={{ color: '#fff', marginBottom: '1rem' }}>Ready to build your plan?</h2>
-            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', marginBottom: '2.5rem' }}>
-              Repliix runs in your browser. No download required. Get your personalized protocol in under 5 minutes.
-            </p>
+          <div className="container" style={{ maxWidth: 560 }}>
             <p style={{
-              display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
-              color: '#fff', fontWeight: 700, fontSize: '1.05rem', margin: 0
+              display: 'inline-block', fontSize: '0.7rem', fontWeight: 700,
+              letterSpacing: '0.18em', textTransform: 'uppercase',
+              color: 'rgba(255,255,255,0.6)', marginBottom: '1rem'
             }}>
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
-                <path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/>
-              </svg>
-              Coming soon to the Google Play Store
+              Now in Beta
             </p>
+            <h2 style={{ color: '#fff', marginBottom: '1rem' }}>
+              Try the app before launch.
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', marginBottom: '2rem' }}>
+              Drop your email and we&rsquo;ll send you the Android beta link instantly.
+            </p>
+            {betaStatus === 'ok' ? (
+              <p style={{ color: '#fff', fontWeight: 600, fontSize: '1.05rem' }}>{betaMsg}</p>
+            ) : (
+              <form onSubmit={submitBeta} style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <input
+                  type="email"
+                  required
+                  placeholder="your@email.com"
+                  value={betaEmail}
+                  onChange={e => setBetaEmail(e.target.value)}
+                  style={{
+                    flex: '1', minWidth: 200, padding: '0.8rem 1.1rem',
+                    borderRadius: 8, border: 'none', fontSize: '0.95rem',
+                    outline: 'none', color: '#111'
+                  }}
+                />
+                <button
+                  type="submit"
+                  disabled={betaBusy}
+                  style={{
+                    padding: '0.8rem 1.5rem', borderRadius: 8, border: 'none',
+                    background: '#fff', color: 'var(--accent)', fontWeight: 700,
+                    fontSize: '0.95rem', cursor: betaBusy ? 'not-allowed' : 'pointer',
+                    opacity: betaBusy ? 0.6 : 1, whiteSpace: 'nowrap'
+                  }}
+                >
+                  {betaBusy ? 'Sending…' : 'Join Beta →'}
+                </button>
+              </form>
+            )}
+            {betaStatus === 'err' && (
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.85rem', marginTop: '0.75rem' }}>{betaMsg}</p>
+            )}
           </div>
         </section>
 
