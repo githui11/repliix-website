@@ -37,7 +37,7 @@ export default function Terms() {
                         <p style={p}>Repliix makes no representation that any protocol or recommendation is appropriate for your individual circumstances. Results described or implied in the app are not guaranteed and will vary between individuals.</p>
 
                         <h2 style={section}>3. Age Requirement</h2>
-                        <p style={p}>Repliix is intended for users aged 17 and older. By using the app, you confirm that you are at least 17 years of age. We do not knowingly collect personal information from users under 17. If we become aware that a user is under 17, we will delete their account immediately.</p>
+                        <p style={p}>Repliix is intended for users aged 18 and older. By using the app, you confirm that you are at least 18 years of age. We do not knowingly collect personal information from users under 18. If we become aware that a user is under 18, we will delete their account immediately.</p>
 
                         <h2 style={section}>4. Use of the Service</h2>
                         <p style={p}>You may use Repliix for personal, non-commercial purposes only. You agree not to:</p>
