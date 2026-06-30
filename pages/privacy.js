@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 
-const section = { color: 'white', marginTop: '2rem', marginBottom: '1rem' };
+const section = { color: '#000', marginTop: '2rem', marginBottom: '1rem' };
 const p = { marginBottom: '1rem', lineHeight: '1.7' };
 const ul = { paddingLeft: '1.5rem', margin: '1rem 0', lineHeight: '1.8' };
 
@@ -18,7 +18,7 @@ export default function Privacy() {
 
                 <section style={{ padding: '8rem 0 6rem', background: 'var(--bg-carbon)', minHeight: '100vh', color: 'var(--text-muted)' }}>
                     <div className="container" style={{ maxWidth: '800px' }}>
-                        <h1 style={{ color: 'white', marginBottom: '0.5rem' }}>Privacy Policy</h1>
+                        <h1 style={{ color: '#000', marginBottom: '0.5rem' }}>Privacy Policy</h1>
                         <p style={{ marginBottom: '3rem', color: 'var(--text-muted)' }}>Last updated: May 17, 2026</p>
 
                         <p style={p}>

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 
-const section = { color: 'white', marginTop: '2rem', marginBottom: '1rem' };
+const section = { color: '#000', marginTop: '2rem', marginBottom: '1rem' };
 const p = { marginBottom: '1rem', lineHeight: '1.7' };
 const ul = { paddingLeft: '1.5rem', margin: '1rem 0', lineHeight: '1.8' };
 
@@ -18,14 +18,14 @@ export default function Terms() {
 
                 <section style={{ padding: '8rem 0 6rem', background: 'var(--bg-carbon)', minHeight: '100vh', color: 'var(--text-muted)' }}>
                     <div className="container" style={{ maxWidth: '800px' }}>
-                        <h1 style={{ color: 'white', marginBottom: '0.5rem' }}>Terms of Service</h1>
+                        <h1 style={{ color: '#000', marginBottom: '0.5rem' }}>Terms of Service</h1>
                         <p style={{ marginBottom: '3rem', color: 'var(--text-muted)' }}>Last updated: June 30, 2026</p>
 
                         <h2 style={section}>1. Agreement to Terms</h2>
                         <p style={p}>By downloading, installing, or using the Repliix mobile application or the website at repliix.com, you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use Repliix. These terms apply to all users of the app and website.</p>
 
                         <h2 style={section}>2. Not Medical Advice</h2>
-                        <p style={p}><strong style={{ color: 'white' }}>Repliix is for informational and educational purposes only. Nothing in this app or website constitutes medical advice, diagnosis, or treatment.</strong></p>
+                        <p style={p}><strong style={{ color: '#000' }}>Repliix is for informational and educational purposes only. Nothing in this app or website constitutes medical advice, diagnosis, or treatment.</strong></p>
                         <p style={p}>The protocols, recommendations, and content provided by Repliix — including but not limited to skincare routines, grooming guidance, fitness protocols, supplement suggestions, and references to cosmetic or surgical procedures — are general information only. They are not a substitute for professional medical advice from a licensed healthcare provider who has examined you.</p>
                         <p style={p}>Using Repliix does not create a doctor-patient relationship between you and Repliix or any of its personnel. Always consult a qualified medical professional before:</p>
                         <ul style={ul}>
