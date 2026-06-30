@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       question: "How much does Repliix cost?",
-      answer: "Repliix is $10/month after a free trial. It runs entirely in your browser, no download needed. You get full access to your personalized plan, all protocol details, and updates as we add new interventions."
+      answer: "Repliix is $9.99/month or $39/year. New users can opt into a 3-day free trial before being charged. You get full access to your personalized protocol, all intervention details, and updates as we add new content."
     }
   ];
 
