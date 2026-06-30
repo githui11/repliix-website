@@ -71,7 +71,7 @@ export default function Privacy() {
                         <ul style={ul}>
                             <li><strong>Access</strong> — request a copy of the data we hold about you.</li>
                             <li><strong>Correction</strong> — request we correct inaccurate data.</li>
-                            <li><strong>Deletion</strong> — request we delete your account and all associated data. Email us at <a href="mailto:githui@repliix.com" style={{ color: '#aaa' }}>githui@repliix.com</a> with the subject "Delete my data" and we will process this within 30 days.</li>
+                            <li><strong>Deletion</strong> — request we delete your account and all associated data. Email us at <a href="mailto:githuimaina11@gmail.com" style={{ color: '#aaa' }}>githuimaina11@gmail.com</a> with the subject "Delete my data" and we will process this within 30 days.</li>
                             <li><strong>Portability</strong> — request a machine-readable export of your data.</li>
                             <li><strong>Opt out of notifications</strong> — disable in your device settings at any time.</li>
                         </ul>
@@ -94,7 +94,7 @@ export default function Privacy() {
                         <h2 style={section}>9. Contact</h2>
                         <p style={p}>
                             For any privacy-related questions or requests, contact us at:<br />
-                            <a href="mailto:githui@repliix.com" style={{ color: '#aaa' }}>githui@repliix.com</a><br />
+                            <a href="mailto:githuimaina11@gmail.com" style={{ color: '#aaa' }}>githuimaina11@gmail.com</a><br />
                             Repliix, Nairobi, Kenya
                         </p>
                     </div>
