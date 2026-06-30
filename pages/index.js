@@ -1,43 +1,10 @@
-﻿// build: beta signup form live (cache-bust 2026-06-28)
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { OrganizationSchema, FAQSchema } from '../components/Schema';
 
 export default function Home() {
-  const [betaEmail, setBetaEmail] = useState('');
-  const [betaStatus, setBetaStatus] = useState(null); // null | 'ok' | 'err'
-  const [betaMsg, setBetaMsg] = useState('');
-  const [betaBusy, setBetaBusy] = useState(false);
-
-  async function submitBeta(e) {
-    e.preventDefault();
-    setBetaBusy(true);
-    setBetaStatus(null);
-    try {
-      const res = await fetch(
-        'https://githuimaina11--claude-orchestrator-fastapi-app.modal.run/repliix-beta-signup',
-        { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: betaEmail }) }
-      );
-      const data = await res.json().catch(() => ({}));
-      if (res.ok) {
-        setBetaStatus('ok');
-        setBetaMsg("You're in! Check your inbox for the beta install link.");
-        setBetaEmail('');
-      } else {
-        setBetaStatus('err');
-        setBetaMsg(data.detail || 'Something went wrong — please try again.');
-      }
-    } catch {
-      setBetaStatus('err');
-      setBetaMsg('Could not connect — please try again.');
-    } finally {
-      setBetaBusy(false);
-    }
-  }
-
   const faqs = [
     {
       question: "Does the app take a photo of my face?",
@@ -306,41 +273,20 @@ export default function Home() {
               Try the app before launch.
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', marginBottom: '2rem' }}>
-              Drop your email and we&rsquo;ll send you the Android beta link instantly.
+              Available now on Android. Tap below to join the closed beta on Google Play.
             </p>
-            {betaStatus === 'ok' ? (
-              <p style={{ color: '#fff', fontWeight: 600, fontSize: '1.05rem' }}>{betaMsg}</p>
-            ) : (
-              <form onSubmit={submitBeta} style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                <input
-                  type="email"
-                  required
-                  placeholder="your@email.com"
-                  value={betaEmail}
-                  onChange={e => setBetaEmail(e.target.value)}
-                  style={{
-                    flex: '1', minWidth: 200, padding: '0.8rem 1.1rem',
-                    borderRadius: 8, border: 'none', fontSize: '0.95rem',
-                    outline: 'none', color: '#111'
-                  }}
-                />
-                <button
-                  type="submit"
-                  disabled={betaBusy}
-                  style={{
-                    padding: '0.8rem 1.5rem', borderRadius: 8, border: 'none',
-                    background: '#fff', color: 'var(--accent)', fontWeight: 700,
-                    fontSize: '0.95rem', cursor: betaBusy ? 'not-allowed' : 'pointer',
-                    opacity: betaBusy ? 0.6 : 1, whiteSpace: 'nowrap'
-                  }}
-                >
-                  {betaBusy ? 'Sending…' : 'Join Beta →'}
-                </button>
-              </form>
-            )}
-            {betaStatus === 'err' && (
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.85rem', marginTop: '0.75rem' }}>{betaMsg}</p>
-            )}
+            <a
+              href="https://play.google.com/apps/testing/com.repliix.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block', padding: '0.85rem 2rem', borderRadius: 8,
+                background: '#fff', color: 'var(--accent)', fontWeight: 700,
+                fontSize: '0.95rem', textDecoration: 'none', whiteSpace: 'nowrap'
+              }}
+            >
+              Join Beta →
+            </a>
           </div>
         </section>
 
